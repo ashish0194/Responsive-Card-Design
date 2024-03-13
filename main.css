@@ -1,0 +1,123 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --clr-bright-orange: hsl(31, 77%, 52%);
+    --clr-dark-cyan: hsl(184, 100%, 22%);
+    --clr-very-dark-cyan: hsl(179, 100%, 13%);
+    /*Text */
+    --clr-transparent-white:hsla(0,0%,100%,0.75);
+    --clr-very-light-gray:hsl(0,0%,95%);
+
+    /* Fonts */
+    --ff-body:"Lexend Deca", sans-serif;
+    --ff-heading: "Big Shoulders Display", sans-serif;
+
+    --fs-body:.95rem;
+    --fs-heading:3rem;
+    --fw-400:400;
+    --fw-700:700;
+}
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    display: block;
+    max-width:100%;
+}
+h1{
+    line-height: 1.1;
+    font-family: var(--ff-heading);
+}
+body{
+    font-family: var(--ff-body);
+    font-weight: var(--fw-400);
+    font-size: var(--fs-body);
+    color: var(--clr-very-light-gray);
+    line-height: 1.6;
+}
+
+/*HELPER CLASS*/
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+/* TEXT STYLES*/
+.title{
+    font-size: var(--fs-heading);
+    font-weight: var(--fw-700);
+    color: var(--clr-very-light-gray);
+    text-transform: uppercase;
+}
+
+/* LAYOUT STYLES*/
+.wrapper{
+    justify-content: center;
+    min-height: 100dvh;
+}
+
+/*GENERAL STYLES*/
+.card-container{
+    width: 65em;
+    border-radius: .5rem;
+    overflow-y: hidden;
+    flex-wrap: wrap;
+    margin: 4rem 1.5rem;
+}
+.card-container > *{
+    flex-basis: 100%;
+    flex: 1 0 18rem;
+}
+.card-container > *:nth-child(1)
+{
+   background-color: var(--clr-bright-orange);
+}
+.card-container > *:nth-child(3)
+{
+   background-color: var(--clr-very-dark-cyan);
+}
+.card{
+    background-color: var(--clr-dark-cyan);
+    padding: 3.5rem;
+}
+.card * + *{
+    margin-top: 2rem;
+}
+.card-button{
+    background: var(--clr-very-light-gray);
+    color: var(--clr-dark-cyan);
+    padding: .6rem 2rem;
+    border-radius: 999px;
+    margin-top: 5rem;
+    border: none;
+    font: inherit;
+    border: 2px solid var(--clr-very-light-gray);
+    transition: background .3s ease;
+    /* background: transparent; */
+}
+
+/* CARD  EACH BUTTONS STYLES*/
+
+.card-button:hover{
+    background: transparent; 
+    color: var(--clr-very-light-gray)!important; 
+    border: 2px solid var(--clr-very-light-gray);
+    cursor: pointer;
+    
+}
+ .card  #sedan{
+    color: var(--clr-bright-orange);
+}
+.card #suv{
+    color: var(--clr-dark-cyan);
+}
+.card #luxury{
+    color: var(--clr-very-dark-cyan);
+}
